@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:quick_mart_ecommerce/modules/Wishlist/wishlist.dart';
+import 'package:quick_mart_ecommerce/modules/wishlist/wishlist.dart';
 import 'package:quick_mart_ecommerce/modules/categories/categories_page.dart';
 import 'package:quick_mart_ecommerce/modules/home/home_page.dart';
 import 'package:quick_mart_ecommerce/modules/my_cart/my_cart.dart';
