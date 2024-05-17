@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int current = 0;
   List pages = [
     Home(),
+    //
     CategoriesPage(),
     MyCart(),
     Wishlist(),
