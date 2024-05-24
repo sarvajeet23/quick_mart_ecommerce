@@ -20,7 +20,7 @@ class Profile extends StatelessWidget {
               child: Container(
             width: MediaQuery.of(context).size.width,
             height: 200,
-            color: PragyaColors.telyecen,
+            color: AapColors.telyecen,
             child: ProfileCard(),
           )),
           Positioned(

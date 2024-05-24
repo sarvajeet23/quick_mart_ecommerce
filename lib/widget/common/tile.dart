@@ -1,11 +1,14 @@
+// Function to generate a random color
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-    //adsfghcvmhhgwgresdfhgcbvvfdsfvxc 
-  }
+Color getRandomColor() {
+  Random random = Random();
+  return Color.fromARGB(
+    255,
+    random.nextInt(256),
+    random.nextInt(256),
+    random.nextInt(256),
+  );
 }

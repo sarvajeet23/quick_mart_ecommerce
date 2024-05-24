@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:quick_mart_ecommerce/modules/Products/ProductListing.dart';
+import 'package:quick_mart_ecommerce/modules/categories/model/categories_model.dart';
+import 'package:quick_mart_ecommerce/modules/categories/sub_categories/model/sub_categories_model.dart';
+import 'package:quick_mart_ecommerce/modules/home/exclusive_sales_page.dart';
 
 class SliderCard extends StatefulWidget {
   @override
@@ -6,7 +10,28 @@ class SliderCard extends StatefulWidget {
 }
 
 class _SliderCardState extends State<SliderCard> {
+  late CategoryModel deatial;
+
+  final List<SubCategoryModel> model = SubCategoryData().categories;
+
   final PageController _controller = PageController();
+  final List<String> productName = [
+    "Headphones",
+    "Charger",
+    "Mobile",
+    "Laptop",
+    "Redmi Note 5 Pro",
+    "Samsung"
+  ];
+  final List<String> exclusiveSales = [
+    "Shiboo",
+    "Baba",
+    "Saroj",
+    "Mukesh",
+    "Ravi",
+    "Pragya"
+  ];
+
   int _currentPage = 0;
 
   @override
@@ -24,7 +49,7 @@ class _SliderCardState extends State<SliderCard> {
           width: double.infinity,
           child: PageView.builder(
             controller: _controller,
-            itemCount: 6,
+            itemCount: productName.length,
             onPageChanged: (int page) {
               setState(() {
                 _currentPage = page;
@@ -37,7 +62,10 @@ class _SliderCardState extends State<SliderCard> {
                 child: Padding(
                   padding: const EdgeInsets.only(right: 15.0),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => ExclusiveSalesPage()));
+                    },
                     child: Image.asset(
                       "images/Rectangle 6.png",
                       fit: BoxFit.fill,
@@ -49,26 +77,12 @@ class _SliderCardState extends State<SliderCard> {
           ),
         ),
         Positioned(
-          top: 70 * 2,
+          top: 140,
           right: 40,
           child: _buildDotsIndicator(),
         ),
-        Positioned(
-          top: 50 * 2,
-          left: 40,
-          child: Text(
-            "On Headphones",
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-        Positioned(
-          top: 70 * 2,
-          left: 40,
-          child: Text(
-            "Exclusive Sales",
-            style: TextStyle(color: Colors.white, fontSize: 25),
-          ),
-        )
+        Positioned(top: 100, left: 40, child: _productName()),
+        Positioned(top: 140, left: 40, child: _exclusiveSales())
       ],
     );
   }
@@ -82,7 +96,7 @@ class _SliderCardState extends State<SliderCard> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < productName.length; i++)
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 5),
                 child: Container(
@@ -94,10 +108,33 @@ class _SliderCardState extends State<SliderCard> {
                   ),
                 ),
               ),
-            SizedBox(
-              height: 10,
-            )
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _productName() {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10),
+      child: Container(
+        color: Colors.transparent,
+        child: Text(
+          productName[_currentPage],
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+
+  Widget _exclusiveSales() {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10),
+      child: Container(
+        color: Colors.transparent,
+        child: Text(
+          exclusiveSales[_currentPage],
+          style: TextStyle(color: Colors.white, fontSize: 25),
         ),
       ),
     );

@@ -68,7 +68,7 @@ class KButton1 extends StatelessWidget {
         child: Center(
           child: Text(
             label,
-            style: PragyaStyle.white,
+            style: PragyaStyle.white.copyWith(fontSize: 20),
           ),
         ),
       ),

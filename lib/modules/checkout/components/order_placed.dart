@@ -27,7 +27,7 @@ class OrderPlaced extends StatelessWidget {
             Text(
               "Thank you for choosing us! Feel free to continue shopping and explore our wide range of products. Happy Shopping!",
               textAlign: TextAlign.center,
-              style: PragyaColors.black38,
+              style: AapColors.black38,
             ),
             hsize30,
             KButton1(

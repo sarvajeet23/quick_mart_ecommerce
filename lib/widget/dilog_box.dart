@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quick_mart_ecommerce/utility/pragrya_style.dart';
 
 class ShibooDialog {
   static showDialogCupertino({
@@ -43,7 +44,7 @@ class ShibooDialog {
                 actions: List.generate(actions.length, (index) => actions[index]),
               ));
 
-  // static dropdownButton() =>
+  // static RichText
 
   static void snackBar(
           {required BuildContext context,
@@ -97,5 +98,18 @@ class ShibooDialog {
         dropdownMenuEntries: items.map<DropdownMenuEntry<String>>((String value) {
           return DropdownMenuEntry<String>(value: value, label: value);
         }).toList(),
+      );
+
+  /// RichText
+  RichText kRichText({
+    required page,
+    required totalPage,
+  }) =>
+      RichText(
+        text: TextSpan(
+          children: [TextSpan(text: totalPage, style: PragyaStyle.black12)],
+          text: page,
+          style: TextStyle(color: Colors.black),
+        ),
       );
 }

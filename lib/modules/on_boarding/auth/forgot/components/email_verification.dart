@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:quick_mart_ecommerce/modules/on_boarding/Onboarding%201/Onboarding%201.dart';
 import 'package:quick_mart_ecommerce/modules/on_boarding/auth/forgot/create_password.dart';
 import 'package:quick_mart_ecommerce/utility/size_box.dart';
-import 'package:quick_mart_ecommerce/widget/otp_screen.dart';
 
 class EmailVerification extends StatelessWidget {
   final GlobalKey<FormState> otplKey = GlobalKey<FormState>();

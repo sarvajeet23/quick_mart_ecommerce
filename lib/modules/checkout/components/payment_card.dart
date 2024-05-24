@@ -48,7 +48,7 @@ class PaymentCard extends StatelessWidget {
                   width: 190,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: PragyaColors.card,
+                    color: AapColors.card,
                   ),
                   child: Image.asset("images/icons/PayPal.png"),
                 ),
@@ -58,7 +58,7 @@ class PaymentCard extends StatelessWidget {
                     child: Image.asset("images/icons/GPay.png"),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: PragyaColors.card,
+                      color: AapColors.card,
                     )),
               ],
             ),
@@ -125,7 +125,7 @@ class PaymentCard extends StatelessWidget {
                     context, MaterialPageRoute(builder: (context) => CheckoutReview()));
               },
               label: "Continue",
-              backgraoundCoulor: PragyaColors.black,
+              backgraoundCoulor: AapColors.black,
               height: 60,
             )
           ],

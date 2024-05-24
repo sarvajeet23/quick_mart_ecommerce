@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PragyaColors {
+class AapColors {
   static const card = Color.fromARGB(31, 170, 162, 162);
   static const addtocard = Color.fromARGB(255, 118, 167, 207);
   static const green = Color.fromARGB(255, 129, 218, 132);
@@ -16,7 +16,7 @@ class PragyaColors {
   );
 
   //This is variable colour Define.
-  var outlineinputborder = OutlineInputBorder(
+  static OutlineInputBorder outlineinputborder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(12),
     borderSide: BorderSide(color: Color.fromARGB(31, 165, 147, 147)),
   );

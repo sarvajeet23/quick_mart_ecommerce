@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quick_mart_ecommerce/modules/Products/product_detail/product_detail.dart';
+import 'package:quick_mart_ecommerce/modules/Products/product_detail/product_description/product_detail.dart';
 import 'package:quick_mart_ecommerce/modules/on_boarding/Onboarding%201/Onboarding%201.dart';
 import 'package:quick_mart_ecommerce/modules/checkout/components/checkout_card.dart';
 import 'package:quick_mart_ecommerce/modules/checkout/components/order_placed.dart';
@@ -133,7 +133,7 @@ class CheckoutReview extends StatelessWidget {
               },
               label: "Place Order",
               height: 60,
-              backgraoundCoulor: PragyaColors.black,
+              backgraoundCoulor: AapColors.black,
             )
           ],
         ),

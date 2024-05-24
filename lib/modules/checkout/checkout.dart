@@ -85,7 +85,7 @@ class Checkout extends StatelessWidget {
                 },
                 label: 'Save',
                 height: 60,
-                backgraoundCoulor: PragyaColors.black,
+                backgraoundCoulor: AapColors.black,
               )
             ],
           ),

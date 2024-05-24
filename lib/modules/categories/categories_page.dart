@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quick_mart_ecommerce/modules/Categories/sub_categories/sub_categories_detail_page.dart';
 import 'package:quick_mart_ecommerce/modules/categories/model/categories_model.dart';
+import 'package:quick_mart_ecommerce/modules/categories/sub_categories/sub_categories_page.dart';
 import 'package:quick_mart_ecommerce/utility/app_colors.dart';
 
 class CategoriesPage extends StatelessWidget {
@@ -18,7 +18,7 @@ class CategoriesPage extends StatelessWidget {
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, mainAxisExtent: 140),
           itemBuilder: (context, index) {
-            var data = model[index];
+            CategoryModel data = model[index];
             return Padding(
               padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
               child: InkWell(
@@ -26,7 +26,7 @@ class CategoriesPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => SubCategories(deatial: data)));
+                          builder: (context) => SubCategoriesPage(deatial: data)));
                 },
                 child: Container(
                   child: Column(
@@ -40,7 +40,7 @@ class CategoriesPage extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: PragyaColors.card),
+                    border: Border.all(color: AapColors.card),
                   ),
                 ),
               ),

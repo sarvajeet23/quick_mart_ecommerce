@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:quick_mart_ecommerce/modules/on_boarding/auth/loign/loign.dart';
 import 'package:quick_mart_ecommerce/utility/size_box.dart';
-import 'package:quick_mart_ecommerce/widget/dilog_box.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({
@@ -34,7 +32,6 @@ class ProfileCard extends StatelessWidget {
               },
               icon: SvgPicture.asset(
                 "images/profile_icons/logout.svg",
-                color: Colors.blue,
               ))
         ],
       ),

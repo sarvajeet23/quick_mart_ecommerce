@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:quick_mart_ecommerce/modules/my_cart/my_cart.dart';
+import 'package:quick_mart_ecommerce/utility/reusable/wishlist_card.dart';
 import 'package:quick_mart_ecommerce/utility/size_box.dart';
 
 class Wishlist extends StatelessWidget {

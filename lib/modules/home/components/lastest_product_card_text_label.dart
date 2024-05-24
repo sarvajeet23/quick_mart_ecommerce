@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 
 class LastestProductsCardTextLabel extends StatelessWidget {
+  final String name;
+  final String dicountprice;
+  final String actualPrice;
+  final Color? selectedColor;
+  final Color? overLap;
+
   final VoidCallback? onTap;
   const LastestProductsCardTextLabel({
     super.key,
     this.onTap,
+    required this.name,
+    required this.dicountprice,
+    required this.actualPrice,
+    this.selectedColor,
+    this.overLap,
   });
 
   @override
@@ -35,13 +46,13 @@ class LastestProductsCardTextLabel extends StatelessWidget {
                       widthFactor: 0.75,
                       child: CircleAvatar(
                         radius: 20,
-                        backgroundColor: Colors.pink,
+                        backgroundColor: overLap,
                         child: CircleAvatar(
                           radius: 18,
                           backgroundColor: Colors.white,
                           child: CircleAvatar(
                             radius: 15,
-                            backgroundColor: colors[i],
+                            backgroundColor: selectedColor,
                           ),
                         ),
                       ),
@@ -51,19 +62,25 @@ class LastestProductsCardTextLabel extends StatelessWidget {
               SizedBox(width: 10),
               InkWell(
                 onTap: onTap,
-                child: Text("All Colors"),
+                child: Text(
+                  "All Colors",
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
               ),
             ],
           ),
           Text(
-            "Nike air jordan retro fashion",
+            name,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           Text(
-            "\$126.00",
+            dicountprice,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          Text("\$126.00"),
+          Text(
+            actualPrice,
+            style: TextStyle(decoration: TextDecoration.lineThrough),
+          ),
         ],
       ),
     );

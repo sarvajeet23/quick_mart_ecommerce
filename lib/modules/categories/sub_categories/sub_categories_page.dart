@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:quick_mart_ecommerce/modules/Categories/sub_categories/model/sub_categories.dart';
 import 'package:quick_mart_ecommerce/modules/Products/ProductListing.dart';
 import 'package:quick_mart_ecommerce/modules/categories/model/categories_model.dart';
+import 'package:quick_mart_ecommerce/modules/categories/sub_categories/model/sub_categories_model.dart';
 
-class SubCategories extends StatelessWidget {
+class SubCategoriesPage extends StatelessWidget {
+  SubCategoriesPage({super.key, required this.deatial});
+
   final CategoryModel deatial;
+
   final List<SubCategoryModel> model = SubCategoryData().categories;
-  SubCategories({super.key, required this.deatial});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class SubCategories extends StatelessWidget {
             mainAxisSpacing: 10,
           ),
           itemBuilder: (context, index) {
-            var data = model[index];
+            SubCategoryModel data = model[index];
             return InkWell(
               onTap: () {
                 Navigator.push(

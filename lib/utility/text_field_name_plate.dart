@@ -17,6 +17,6 @@ class TextFieldNamePlate extends StatelessWidget {
         text: TextSpan(
             text: name,
             style: PragyaStyle.black20,
-            children: [TextSpan(text: requiredIcon, style: PragyaColors.red)]));
+            children: [TextSpan(text: requiredIcon, style: AapColors.red)]));
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:quick_mart_ecommerce/modules/profile/components/dark_theme_card.dart';
 import 'package:quick_mart_ecommerce/modules/profile/model/profile_model.dart';
 import 'package:quick_mart_ecommerce/utility/pragrya_style.dart';
 
@@ -8,23 +9,19 @@ class ProfileInformantionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SectionTitle("Personal Information"),
-              ...ProfileTiles(context, personalInformation),
-              SectionTitle("Support & Information"),
-              ...ProfileTiles(context, supportInformation),
-              SectionTitle("Account Management"),
-              ...ProfileTiles(context, accountManagement),
-              DarkTheme()
-            ],
-          ),
-        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SectionTitle("Personal Information"),
+          ...ProfileTiles(context, personalInformation),
+          SectionTitle("Support & Information"),
+          ...ProfileTiles(context, supportInformation),
+          SectionTitle("Account Management"),
+          ...ProfileTiles(context, accountManagement),
+          DarkTheme()
+        ],
       ),
     );
   }
@@ -57,25 +54,5 @@ class ProfileInformantionCard extends StatelessWidget {
         trailing: Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
       );
     }).toList();
-  }
-}
-
-class DarkTheme extends StatelessWidget {
-  const DarkTheme({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding: EdgeInsets.symmetric(horizontal: 0),
-      leading: SvgPicture.asset('images/profile_icons/dark_theme.svg'),
-      title: Text("DarkTheme"),
-      trailing: Switch(
-        value: true,
-        onChanged: (_) {},
-        focusColor: Colors.amber,
-      ),
-    );
   }
 }

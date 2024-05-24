@@ -22,7 +22,7 @@ class ProductDetailButton extends StatelessWidget {
           label: "Buy Now",
           height: 60,
           width: 200,
-          backgraoundCoulor: PragyaColors.black,
+          backgraoundCoulor: AapColors.black,
         ),
         KButton2(
           onTap: () {
@@ -32,7 +32,7 @@ class ProductDetailButton extends StatelessWidget {
           buttonicon: Icons.shopping_cart_outlined,
           height: 60,
           width: 200,
-          backgraoundCoulor: PragyaColors.black,
+          backgraoundCoulor: AapColors.black,
         ),
       ],
     );

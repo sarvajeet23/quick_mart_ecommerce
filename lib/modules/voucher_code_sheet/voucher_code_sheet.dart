@@ -35,7 +35,7 @@ class VoucherCodeSheet extends StatelessWidget {
               onTap: () {},
               label: "Apply",
               height: 60,
-              backgraoundCoulor: PragyaColors.black,
+              backgraoundCoulor: AapColors.black,
             )
           ],
         ),

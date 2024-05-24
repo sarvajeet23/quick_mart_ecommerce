@@ -61,7 +61,8 @@ class ProductName extends StatelessWidget {
                   ),
                   Text(
                     "\$ 15.25",
-                    style: PragyaStyle.bold12,
+                    style: PragyaStyle.bold12
+                        .copyWith(decoration: TextDecoration.lineThrough),
                   ),
                 ],
               ),

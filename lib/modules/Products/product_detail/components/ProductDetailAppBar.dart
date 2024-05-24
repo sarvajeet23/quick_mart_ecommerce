@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ProductDetailAppBar extends StatelessWidget {
+class ProductDetailAppBar extends StatefulWidget {
   const ProductDetailAppBar({
     super.key,
   });
 
+  @override
+  State<ProductDetailAppBar> createState() => _ProductDetailAppBarState();
+}
+
+class _ProductDetailAppBarState extends State<ProductDetailAppBar> {
+  bool isSelected = true;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,19 +21,26 @@ class ProductDetailAppBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-                style: ButtonStyle(iconSize: MaterialStatePropertyAll(35)),
+                style: ButtonStyle(iconSize: WidgetStatePropertyAll(35)),
                 onPressed: () {
                   Navigator.pop(context);
                 },
                 icon: Icon(
                   Icons.arrow_back,
                 )),
-            CircleAvatar(
-              child: Icon(
-                Icons.favorite_border,
-                color: Colors.white,
+            InkWell(
+              onTap: () {
+                setState(() {
+                  isSelected = !isSelected;
+                });
+              },
+              child: CircleAvatar(
+                child: Icon(
+                  Icons.favorite,
+                  color: isSelected ? Colors.white : Colors.amber,
+                ),
+                backgroundColor: Colors.black,
               ),
-              backgroundColor: Colors.black,
             )
           ],
         ),

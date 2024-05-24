@@ -7,6 +7,7 @@ import 'package:quick_mart_ecommerce/utility/pragrya_style.dart';
 import 'package:quick_mart_ecommerce/utility/size_box.dart';
 import 'package:quick_mart_ecommerce/utility/text_field_name_plate.dart';
 
+// ignore: must_be_immutable
 class CreatePassword extends StatelessWidget {
   TextEditingController password = TextEditingController();
   TextEditingController confromPassword = TextEditingController();

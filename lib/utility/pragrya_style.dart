@@ -8,6 +8,9 @@ class PragyaStyle {
   static const boldwithsize = TextStyle(fontWeight: FontWeight.bold);
   static const cyan = TextStyle(color: Colors.cyan);
   static const font20 = TextStyle(fontWeight: FontWeight.bold, fontSize: 20);
+  static const font25 = TextStyle(fontWeight: FontWeight.bold, fontSize: 25);
+
   static const black20 = TextStyle(fontSize: 20, color: Colors.black);
   static const black12 = TextStyle(color: Color.fromARGB(31, 0, 0, 0));
+  static const black54 = TextStyle(color: Colors.black54);
 }

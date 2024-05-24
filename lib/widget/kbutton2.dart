@@ -40,7 +40,7 @@ class KButton2 extends StatelessWidget {
             wsize8,
             Icon(
               buttonicon,
-              color: PragyaColors.white,
+              color: AapColors.white,
             )
           ],
         ),
