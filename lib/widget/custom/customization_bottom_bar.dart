@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:quick_mart_ecommerce/modules/bottom_bar/home_screen.dart';
 
 class MyButtombar extends StatefulWidget {
-  final List<BottomNavigationBarItem> bottomNavigationBarItems;
+  final List<BottomNavBarItem> bottomNavigationBarItems;
   final List<Widget> pages;
   final double? height;
   final double? iconSize;
@@ -87,7 +89,9 @@ class _MynavigationbarState extends State<MyButtombar> {
                 color: isSelected ? widget.activeColor : widget.inactiveColor,
                 size: widget.iconSize ?? 40,
               ),
-              child: item.icon,
+              child: isSelected && item.activeIcon!.isNotEmpty
+                  ? SvgPicture.asset(item.activeIcon ?? '')
+                  : SvgPicture.asset(item.icon ?? ''),
             ),
             Text(
               item.label ?? '',

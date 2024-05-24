@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:quick_mart_ecommerce/modules/on_boarding/auth/loign/auth/validator.dart';
-import 'package:quick_mart_ecommerce/modules/bottom_bar/dashboard.dart';
+import 'package:quick_mart_ecommerce/modules/bottom_bar/home_screen.dart';
 import 'package:quick_mart_ecommerce/modules/on_boarding/Onboarding%201/Onboarding%201.dart';
 import 'package:quick_mart_ecommerce/modules/on_boarding/auth/forgot/forgot_password.dart';
 import 'package:quick_mart_ecommerce/modules/on_boarding/auth/signup/signup.dart';
