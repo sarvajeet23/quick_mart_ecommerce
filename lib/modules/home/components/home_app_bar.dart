@@ -51,7 +51,14 @@ class HomeAppBar extends StatelessWidget {
                       },
                       child: Text("Cancel")),
                 ]),
-            child: PictureCard(Picture: Center(child: Text("inside pic"))),
+            child: PictureCard(
+                Picture: ClipRRect(
+              borderRadius: BorderRadius.circular(15),
+              child: Image.asset(
+                "images/profile_pic/shiboo.png",
+                fit: BoxFit.fill,
+              ),
+            )),
           )
         ],
       ),
