@@ -71,12 +71,13 @@ flutter:
     - images/bottom_bar_icon/
     - images/products/
     - images/products/Electronics/
-    - images/products/product_Lists/
     - images/icons/
     - images/profile_icons/
     - images/bottom_icons/
     - images/country_flag/
     - images/profile_icons/profile_pic/
+    - images/products/product_list/
+    - images/products/product_categories/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

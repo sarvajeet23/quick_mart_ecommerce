@@ -103,7 +103,7 @@ class _ProductDetailState extends State<ProductDetail> {
                           hsize10,
                           SizedBox(width: 110, child: ItemCountButton()),
                           hsize19,
-                          hsize50,
+                          // hsize50,
                           ProductDetailButton(),
                         ],
                       ),

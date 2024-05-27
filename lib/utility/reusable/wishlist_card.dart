@@ -23,7 +23,7 @@ class WishListCard extends StatelessWidget {
             height: 145,
             width: 130,
             child: Image.asset(
-              "images/products/product_Lists/Loop silicone .png",
+              "images/products/product_categories/Loop silicone .png",
               fit: BoxFit.fill,
             ),
           ),

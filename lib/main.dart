@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quick_mart_ecommerce/modules/on_boarding/auth/loign/loign.dart';
 import 'package:quick_mart_ecommerce/modules/bottom_bar/home_screen.dart';
-import 'package:quick_mart_ecommerce/modules/profile/components/profile_infomation.dart';
-
-import 'package:quick_mart_ecommerce/modules/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

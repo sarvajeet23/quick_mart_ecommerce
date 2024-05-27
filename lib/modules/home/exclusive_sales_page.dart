@@ -40,7 +40,7 @@ class ExclusiveSalesPage extends StatelessWidget {
                     ProductCard(
                       backgroundColor: AapColors.addtocard,
                       child: Image.asset(
-                        "images/products/product_Lists/Loop silicone .png",
+                        "images/products/product_categories/Loop silicone .png",
                         fit: BoxFit.fill,
                       ),
                     ),

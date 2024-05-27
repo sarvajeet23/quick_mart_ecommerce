@@ -8,6 +8,8 @@ import 'package:quick_mart_ecommerce/modules/home/components/home_app_bar.dart';
 import 'package:quick_mart_ecommerce/modules/home/components/lastest_product_card.dart';
 import 'package:quick_mart_ecommerce/modules/home/components/lastest_product_card_text_label.dart';
 import 'package:quick_mart_ecommerce/modules/home/components/slider_card.dart';
+import 'package:quick_mart_ecommerce/modules/home/product_list_model/json_data.dart';
+import 'package:quick_mart_ecommerce/modules/home/product_list_model/porouct_list_model.dart';
 import 'package:quick_mart_ecommerce/utility/size_box.dart';
 import 'package:quick_mart_ecommerce/widget/product_title.dart';
 import 'package:quick_mart_ecommerce/widget/products_images.dart';
@@ -23,6 +25,7 @@ class _HomeState extends State<Home> {
   final List<ProductCategory> model = Data().categories;
   final List<CategoryModel> categories = CategoryModelData().categories;
   final List<bool> isSelectedList = List.generate(10, (index) => true);
+  final List<Product> products = parseProducts(jsonData);
 
   @override
   Widget build(BuildContext context) {
@@ -95,8 +98,9 @@ class _HomeState extends State<Home> {
                 crossAxisSpacing: 20.0,
                 mainAxisSpacing: 60 * 2,
               ),
-              itemCount: 10,
+              itemCount: products.length,
               itemBuilder: (BuildContext context, int index) {
+                final productList = products[index];
                 return InkWell(
                   onTap: () {
                     Navigator.push(context,
@@ -107,7 +111,7 @@ class _HomeState extends State<Home> {
                     children: [
                       LatestProductCard(
                         image: Image.asset(
-                          "images/iphone.jpg",
+                          productList.image,
                           fit: BoxFit.fill,
                         ),
                         onTap: () {
@@ -121,9 +125,9 @@ class _HomeState extends State<Home> {
                       LastestProductsCardTextLabel(
                         overLap: Colors.blue,
                         selectedColor: Colors.amber,
-                        name: 'iphone',
-                        dicountprice: '70,000',
-                        actualPrice: "90,000",
+                        name: productList.name,
+                        dicountprice: productList.discountPrice,
+                        actualPrice: productList.actualPrice,
                       ),
                     ],
                   ),

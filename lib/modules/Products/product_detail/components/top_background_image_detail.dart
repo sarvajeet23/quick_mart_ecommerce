@@ -8,7 +8,7 @@ class TopBackgroundImageDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      "images/products/product_Lists/smrtwatch.avif",
+      "images/products/product_categories/smrtwatch.avif",
       fit: BoxFit.fill,
     );
   }

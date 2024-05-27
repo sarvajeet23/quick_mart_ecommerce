@@ -15,7 +15,7 @@ class ProfileCard extends StatelessWidget {
         children: [
           PictureCard(
             Picture: Image.asset(
-              "images/products/product_Lists/Loop silicone .png",
+              "images/products/product_categories/Loop silicone .png",
               fit: BoxFit.fill,
             ),
           ),
@@ -32,6 +32,7 @@ class ProfileCard extends StatelessWidget {
               },
               icon: SvgPicture.asset(
                 "images/profile_icons/logout.svg",
+                color: Colors.amber,
               ))
         ],
       ),
@@ -52,7 +53,7 @@ class PictureCard extends StatelessWidget {
         height: 50,
         width: 50,
         decoration:
-            BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15)),
+            BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(15)),
         child: Picture);
   }
 }
